@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+     
+  </head>
+  <body>
+    <header>
+      <h1>Mi Blog Personal</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="irA('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="irA('acerca_de_mi')">Acerca de mí</a></li>
+        <li><a href="#" onclick="irA('blog')">Blog</a></li>
+        <li><a href="#" onclick="irA('contacto')">Contacto</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2 id="titulo">Bienvenidos a mi Blog Personal</h2>
+      <p id="contenido">Este es el lugar donde compartiré mis pensamientos, experiencias y conocimientos.</p>
+    </main>
+    <footer>
+      <p>Copyright © 2022 Mi Blog Personal</p>
+    </footer>
+    <script>
+      var paginaActual = 'inicio';
+      function irA(paginaDestino) {
+        if (paginaDestino == 'inicio') {
+          document.getElementById("titulo").innerHTML = "Bienvenidos a mi Blog Personal";
+          document.getElementById("contenido").innerHTML = "Este es el lugar donde compartiré mis pensamientos, experiencias y conocimientos.";
+        }
+        else if (paginaDestino == 'acerca_de_mi') {
+          document.getElementById("titulo").innerHTML = "Acerca de mí";
+          document.getElementById("contenido").innerHTML = "Este es un poco sobre mí.";
+        }
+        else if (paginaDestino == 'blog') {
+          document.getElementById("titulo").innerHTML = "Blog";
+          document.getElementById("contenido").innerHTML = "Aquí es donde publico mis pensamientos.";
+        }
+        else if (paginaDestino == 'contacto') {
+          document.getElementById("titulo").innerHTML = "Contacto";
+          document.getElementById("contenido").innerHTML = "Escribeme para negocios a: gloric97@gmail.com.";
+        }
+        paginaActual = paginaDestino;
+      }
+
+    </script>
+  </body>
+</html>
